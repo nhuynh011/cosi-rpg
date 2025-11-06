@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd73sn6h0fcv4"]
+
+[ext_resource type="Script" uid="uid://bmjx6fnv4tqru" path="res://Tino.gd" id="1_8uh7m"]
+[ext_resource type="Texture2D" uid="uid://bri3q18weghhp" path="res://tino.png" id="2_6uqi0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(483, 292)
+script = ExtResource("1_8uh7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -7.6293945e-06)
+scale = Vector2(0.1971875, 0.19972225)
+texture = ExtResource("2_6uqi0")
