@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bri3q18weghhp"
-path="res://.godot/imported/tino.png-9a18f72c1aaab3a7e23153c7fca49c03.ctex"
+uid="uid://hc08dskkd0lf"
+path="res://.godot/imported/tino.png-08636e64103e313633a535f91da3ccac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tino.png"
-dest_files=["res://.godot/imported/tino.png-9a18f72c1aaab3a7e23153c7fca49c03.ctex"]
+source_file="res://assets/tino.png"
+dest_files=["res://.godot/imported/tino.png-08636e64103e313633a535f91da3ccac.ctex"]
 
 [params]
 
