@@ -3,10 +3,11 @@ extends CharacterBody2D
 const speed: float = 40000
 
 @onready var animation_player = $AnimatedSprite2D
-	
+
+
 func _physics_process(delta: float) -> void:
 	var vec: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	
+
 	update_animation(vec)
 	
 	if vec == Vector2.ZERO:
@@ -30,4 +31,3 @@ func update_animation(direction: Vector2) -> void:
 			animation_player.play("moving_down")
 		else:
 			animation_player.play("moving_up")
-	
