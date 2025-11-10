@@ -23,13 +23,10 @@ func update_animation(direction: Vector2) -> void:
 	elif abs(direction.x) > 0.01: # moving left / right
 		if direction.x > 0.01:
 			animation_player.play("moving_left")
-			animation_player.flip_h = false
 		else:
-			animation_player.play("moving_left")
-			animation_player.flip_h = true
+			animation_player.play("moving_right")
 	else: # moving up / down
-		animation_player.flip_h = false
-		if velocity.y > 0.01:
+		if direction.y > 0.01:
 			animation_player.play("moving_down")
 		else:
 			animation_player.play("moving_up")
