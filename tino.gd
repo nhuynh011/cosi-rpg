@@ -1,11 +1,10 @@
-extends Sprite2D
+extends Area2D
 
 var config: Node
 
 func _ready() -> void:
 	config = $"/root/SaveData"
-	visible = config.load_tino()
-
+	visible = config.load_tino() 
 
 func _unhandled_input(event):
 	if event is InputEventKey:

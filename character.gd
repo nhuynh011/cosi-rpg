@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
-const speed: float = 40000
+const speed: float = 80000
 
 @onready var animation_player = $AnimatedSprite2D
+@onready var save_data: SaveData = $"/root/SaveData"
 
 
 func _physics_process(delta: float) -> void:
@@ -23,11 +24,16 @@ func update_animation(direction: Vector2) -> void:
 		animation_player.stop()
 	elif abs(direction.x) > 0.01: # moving left / right
 		if direction.x > 0.01:
-			animation_player.play("moving_left")
-		else:
 			animation_player.play("moving_right")
+		else:
+			animation_player.play("moving_left")
 	else: # moving up / down
 		if direction.y > 0.01:
 			animation_player.play("moving_down")
 		else:
 			animation_player.play("moving_up")
+
+
+func _on_enter_tino_fight(body: Node2D) -> void:
+	if body.name == "MainCharacter" and save_data.load_tino():
+		get_tree().change_scene_to_file("res://battle.tscn")
